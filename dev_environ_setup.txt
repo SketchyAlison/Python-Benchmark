@@ -1,0 +1,5 @@
+# Install PyCharm.
+# Install Python.
+# Install NI-DAQmx.
+# From cmd use: py -m pip install nidaqmx
+# From cmd use: py -m pip install xlsxwriter
