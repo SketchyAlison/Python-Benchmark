@@ -4,6 +4,7 @@ import xlsxwriter
 import datetime
 import os.path
 
+
 def single_method_benchmark(session, method_to_test, trials):
     session.open()
     results = []
@@ -88,9 +89,6 @@ results = single_method_benchmark(session, session.read_std, trials)
 print(session.data)
 print(len(session.data))
 print(results)
-
-#open_results = open_benchmark(session, trials)
-#print(open_results)
 
 # ------------- LOG TO FILE --------------
 
