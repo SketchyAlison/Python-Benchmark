@@ -3,6 +3,7 @@ import nidaqmx
 
 class DaqmxSession:
 
+    # Currently testing on simulated multifunction DAQ device.
     dev = "Dev1"
     chan = "ai0"
     physchan = dev + "/" + chan
