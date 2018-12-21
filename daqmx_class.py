@@ -10,6 +10,7 @@ class DaqmxSession:
     def open(self):
         self.task = nidaqmx.task.Task()
         self.task.ai_channels.add_ai_voltage_chan(self.physchan)
+        # Add DAQmx Start Task here so that first iteration does not have to auto-start, skewing the results.
 
     def close(self):
         self.task.close()
@@ -23,6 +24,7 @@ class DaqmxSession:
 #        self.data = self.task.write(100)
   # --------------------------------
 
+# Testing methods....
 
 #testsesh = DaqmxSession()
 #print(testsesh.chan)

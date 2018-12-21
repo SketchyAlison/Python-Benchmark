@@ -4,7 +4,6 @@ import xlsxwriter
 import datetime
 import os.path
 
-
 def single_method_benchmark(session, method_to_test, trials):
     session.open()
     results = []
@@ -39,7 +38,7 @@ def close_benchmark(session, trials):
 
 # ------------- LOGGING SETUP --------------
 
-auto_incr_test_num = False
+auto_incr_test_num = True
 test_name = "PythonBenchmarkDAQmxAI"
 test_num = 1
 
@@ -83,7 +82,7 @@ row = data_label_row + 1
 # ----------------- DRIVER TEST --------------
 
 session = DaqmxSession()
-trials = 2
+trials = 6
 
 results = single_method_benchmark(session, session.read_std, trials)
 print(session.data)
